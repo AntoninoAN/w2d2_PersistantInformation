@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateEditViews(View view) {
-        et_name_values.setText(settingsValues.getString("name",""));
-        et_lastname_values.setText(settingsValues.getString("lastname",""));
+        et_name_values.setText(settingsValues.getString("name","DEFAULT NAME VALUE"));
+        et_lastname_values.setText(settingsValues.getString("lastname","DEFAULT LASTNAME VALUE"));
     }
 
     public void popupLastName(View view) {
@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences.Editor editor= settingsValues.edit();
 
+        //String nameValue= et_name_values.getText().toString().isEmpty()?"":"DEFAULT";
 
-
-        editor.putString("name",et_name_values.getText().toString());
-        editor.putString("lastname",et_lastname_values.getText().toString());
+        editor.putString("name",et_name_values.getText().toString().isEmpty()?"DEFAULT NAME VALUE":et_name_values.getText().toString());
+        editor.putString("lastname",et_lastname_values.getText().toString().isEmpty()?"DEFAULT LAST NAME VALUE":et_lastname_values.getText().toString());
         editor.commit();
 
         et_name_values.setText("");
