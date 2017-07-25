@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">w2d2_SharedPreferences</string>
+    <string name="lbl_btn_update_values">UPDATE VALUES</string>
+    <string name="lbl_btn_read_last_name">READ LAST NAME</string>
+    <string name="lbl_btn_read_name">READ NAME</string>
+    <string name="lbl_btn_save">SAVE</string>
+</resources>
